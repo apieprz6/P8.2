@@ -47,8 +47,8 @@ public class HeapOfCharacters
       int parentIndex = curIndex / 2;
       Character cur = heap.get(curIndex);
 
-      while ((curIndex > 1) &&
-             (cur.compareTo(heap.get(parentIndex)) < 0))
+      while ((curIndex > 1) && 
+            (cur.compareTo(heap.get(parentIndex)) < 0))
       {
          // Swap current element with its parent
          Character parent = heap.get(parentIndex);
@@ -58,5 +58,9 @@ public class HeapOfCharacters
          curIndex = parentIndex;
          parentIndex = curIndex / 2;
       }
+   }
+   private void bubbleDown()
+   {
+       
    }
 } 
