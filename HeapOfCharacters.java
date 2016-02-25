@@ -36,6 +36,13 @@ public class HeapOfCharacters
       heap.add(ch);
       bubbleUp();
    }
+   public Character removeRoot(){
+       Character root = heap.get(1);
+       heap.remove(1);
+       heap.set(1,heap.get(heap.size()-1));
+       bubbleDown();
+       return root;
+    }
 
    //-----------------------------------------------------------------
    //  Bubbles the last element up as necessary to preserve
@@ -61,6 +68,33 @@ public class HeapOfCharacters
    }
    private void bubbleDown()
    {
+       int curIndex=1;
+       int swapIndex=1;
+       Character leftChild = heap.get(curIndex*2);
+       Character rightChild = heap.get(curIndex*2+1);
+       Character cur = heap.get(curIndex);
+       while((curIndex*2<heap.size()-1) && (cur.compareTo(leftChild)<0)){
+           swapIndex = -1;
+           rightChild = heap.get(curIndex*2+1);
+           leftChild = heap.get(curIndex*2);
+           cur = heap.get(curIndex);
+           if(curIndex*2+1<heap.size()+1){
+               if(rightChild.compareTo(leftChild)<0){
+                   swapIndex = curIndex*2+1;
+                }
+               else{
+                   swapIndex = curIndex*2;
+                }
+            }
+            else if(leftChild.compareTo(cur)<0){
+                swapIndex = curIndex*2;
+            }
+           if(swapIndex!=-1){
+               heap.set(swapIndex,cur);
+               heap.set(curIndex, heap.get(swapIndex));
+               curIndex = swapIndex;
+            }
+        }
        
    }
 } 
