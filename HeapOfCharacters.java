@@ -73,7 +73,7 @@ public class HeapOfCharacters
        Character leftChild = heap.get(curIndex*2);
        Character rightChild = heap.get(curIndex*2+1);
        Character cur = heap.get(curIndex);
-       while((curIndex*2<heap.size()-1) && (cur.compareTo(leftChild)<0)){
+       while((curIndex*2<heap.size()-1) && (cur.compareTo(leftChild)<0 || cur.compareTo(rightChild)<0)){
            swapIndex = -1;
            rightChild = heap.get(curIndex*2+1);
            leftChild = heap.get(curIndex*2);
