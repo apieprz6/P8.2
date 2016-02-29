@@ -24,6 +24,7 @@ public class HeapSort
       for (int i = 0; i < data.length; i++)
       {
           data[i] = heap.removeRoot();
+          System.out.println(heap);
       }
    }
 }

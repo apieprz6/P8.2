@@ -89,7 +89,7 @@ public class HeapOfCharacters
             //System.out.println("Loop Conditions 1");
             //System.out.println("\t" + curIndex*2 + " < " + (heap.size()-1));
             //System.out.println("\t" + cur.compareTo(leftChild) + " > 0 ");
-            while((curIndex*2<heap.size()-1) && (cur.compareTo(leftChild)>0)){
+            while((curIndex*2<=heap.size()-1) && (cur.compareTo(leftChild)>0)){
                 //System.out.println("Enters while loop " + x);
                 swapIndex = -1;
                 leftChild = heap.get(curIndex*2);

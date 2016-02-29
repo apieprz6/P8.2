@@ -70,10 +70,12 @@ public class HeapSortTest
 	@Test
 	public void testEvenNumberChar()
 	{
-		char[] c = {'d','a','f','e','c','d'};
+		char[] c = {'d','a','f','e','c','b'};
 		//HeapSort.heapsort(c);
 		char[] b = {'a','b','c','d','e','f'};
 		HeapSort.heapsort(c);
+		System.out.print("Ordered Array: ");
+		System.out.println(c);
 		for(int ind = 0; ind < c.length;ind++)
 		assertEquals(b[ind], c[ind]);
 	}
