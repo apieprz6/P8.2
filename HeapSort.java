@@ -18,12 +18,12 @@ public class HeapSort
       {
          heap.add(c);
       }
-
+      System.out.println("Working with heap " + heap);
       // Remove the characters from the heap in sorted order
       // and put them back into the array.
       for (int i = 0; i < data.length; i++)
       {
-         data[i] = heap.removeRoot();
+          data[i] = heap.removeRoot();
       }
    }
 }

@@ -14,27 +14,28 @@ public class HeapTest
    {
       HeapOfCharacters heap = new HeapOfCharacters();
 
-//       heap.add('Q');
-//       //System.out.println (heap);
-//       heap.add('H');
-//       //System.out.println (heap);
-//       heap.add('N');
-//       //System.out.println (heap);
-//       heap.add('B');
-//       //System.out.println (heap);
-//       heap.add('F');
-//       //System.out.println (heap);
-//       heap.add('W');
-//       //System.out.println (heap);
-//       heap.add('K');
-//       //System.out.println (heap);
-//       heap.add('A');
-        heap.add('c');
-        heap.add('b');
-        heap.add('a');
-        heap.add('d');
+      heap.add('Q');
+      //System.out.println (heap);
+      heap.add('H');
+      //System.out.println (heap);
+      heap.add('N');
+      //System.out.println (heap);
+      heap.add('B');
+      //System.out.println (heap);
+      heap.add('F');
+      //System.out.println (heap);
+      heap.add('W');
+      //System.out.println (heap);
+      heap.add('K');
+      //System.out.println (heap);
+      heap.add('A');
+        //heap.add('c');
+        //heap.add('b');
+        //heap.add('a');
+        //heap.add('d');
       System.out.println ("Initial = " + heap);
-      heap.removeRoot();
+      Character test = heap.removeRoot();
+      System.out.println(test);
       System.out.println ("Final = " + heap);
    }
 } 

@@ -70,7 +70,8 @@ public class HeapSortTest
 	@Test
 	public void testEvenNumberChar()
 	{
-		char[] c = {'d','a','f','e','c','b'};
+		char[] c = {'d','a','f','e','c','d'};
+		//HeapSort.heapsort(c);
 		char[] b = {'a','b','c','d','e','f'};
 		HeapSort.heapsort(c);
 		for(int ind = 0; ind < c.length;ind++)
